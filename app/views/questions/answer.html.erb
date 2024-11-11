@@ -1,0 +1,19 @@
+<div class="container">
+<form action="/answer" data-turbo="false" class="form">
+  <input type="text" name="input">
+  <input type="submit" value="Ask!" class="btn btn-primary">
+  <div class="box">
+    <h2>Question : </h2>
+    <p><%= params[:input]%></p>
+    <p><em>- You</em></p>
+  </div>
+  <div class="box" id="answerbox">
+  <h2>Answer :</h2>
+  <p><%= params[:answer]%></p>
+  <p><em>- Your coach</em></p>
+  </div>
+</form>
+  <div id="new-link">
+    <%= link_to "Ask à new question", question_path %>
+  </div>
+</div>
